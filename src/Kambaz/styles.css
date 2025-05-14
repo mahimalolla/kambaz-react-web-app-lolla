@@ -1,255 +1,454 @@
-#wd-kambaz-navigation {
-    background-color: #343a40;
+/* Modern Dark Theme for Kambaz - 2025 Style */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e2d;
+    --bg-accent: #252538;
+    --text-primary: #e6e6e6;
+    --text-secondary: #a0a0a0;
+    --accent-blue: #4f46e5;
+    --accent-purple: #6366f1;
+    --accent-indigo: #818cf8;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.25s ease;
+  }
+  
+  /* Important fix for specificity - make sure main content is visible */
+  body > div:not(#wd-kambaz-navigation),
+  body > main,
+  body > section,
+  body > article {
+    margin-left: 260px !important;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Apply for all direct children except navigation */
+  body > *:not(#wd-kambaz-navigation):not(script):not(style) {
+    margin-left: 260px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Override for dashboard elements */
+  #wd-home h1, #wd-home h2, #wd-home h3,
+  .dashboard-title, .dashboard-subtitle {
+    margin-left: 260px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* Course list container */
+  #published-courses, .published-courses {
+    margin-left: 260px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* Ensure everything after the navigation is visible */
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* SIDEBAR NAVIGATION */
+  #wd-kambaz-navigation {
+    background-color: var(--bg-secondary);
     min-height: 100vh;
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    z-index: 1; /* Reduced z-index to ensure content is above */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
   }
   
   #wd-kambaz-navigation a {
-    color: #f8f9fa;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   #wd-kambaz-navigation a:hover {
-    background-color: rgba(255,255,255,0.1);
-    text-decoration: none;
+    background-color: var(--hover-color);
+    border-left: 3px solid var(--accent-blue);
   }
   
   #wd-kambaz-navigation a.active {
-    background-color: #007bff;
-  }
-
-  .wd-dashboard-course {
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
+    background-color: var(--bg-accent);
+    border-left: 3px solid var(--accent-purple);
   }
   
-  .wd-dashboard-course:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-  
-  .card {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    height: 100%;
-  }
-  
-  .card-img-top {
-    height: 160px;
-    object-fit: cover;
-  }
-  
-  .wd-dashboard-course-title {
-    font-weight: 600;
+  /* Change bullet points to a modern style */
+  #wd-kambaz-navigation li {
+    list-style-type: none;
     margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    position: relative;
   }
   
-  .wd-dashboard-course-description {
-    color: #6c757d;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  #wd-home {
-    padding: 20px;
-  }
-  
-  .wd-module {
-    margin-bottom: 20px;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    overflow: hidden;
+  #wd-kambaz-navigation li::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   }
   
-  .wd-module .wd-title {
-    background-color: #f8f9fa;
-    padding: 12px 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .wd-lessons .wd-lesson {
-    padding: 10px 15px;
-    border-left: 3px solid #28a745;
-    margin-bottom: 1px;
-    transition: background-color 0.2s;
-  }
-  
-  .wd-lessons .wd-lesson:hover {
-    background-color: #f8f9fa;
-  }
-  
-  #wd-course-status {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-  }
-
-  #wd-signin-screen, #wd-signup-screen, #wd-profile-screen {
-    max-width: 400px;
-    margin: 40px auto;
+  /* MAIN CONTENT AREA */
+  .main-content, #wd-home, #wd-assignments {
+    margin-left: 260px; /* Increased from 240px to add some spacing */
     padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
   }
   
-  #wd-signin-screen h3, #wd-signup-screen h3, #wd-profile-screen h3 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #343a40;
-  }
-  
-  .wd-username, .wd-password {
+  /* TITLE STYLES */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 600;
     margin-bottom: 15px;
   }
   
-  #wd-signin-btn, #wd-signup-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-weight: 500;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
   }
   
-  #wd-signin-btn:hover, #wd-signup-btn:hover {
-    background-color: #0069d9;
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+    border-radius: 2px;
   }
   
-  #wd-account-navigation {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
+  h2 {
+    font-size: 1.8rem;
+    color: var(--accent-indigo);
   }
   
-  #wd-account-navigation a {
-    display: block;
-    padding: 10px;
-    margin-bottom: 5px;
-    color: #495057;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+  h3 {
+    font-size: 1.4rem;
+    margin-top: 25px;
   }
   
-  #wd-account-navigation a:hover {
-    background-color: #e9ecef;
+  /* LINKS */
+  a {
+    color: var(--accent-indigo);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--accent-purple);
     text-decoration: none;
   }
   
-  #wd-account-navigation a.active {
-    background-color: #007bff;
-    color: white;
+  /* LISTS */
+  ul {
+    padding-left: 20px;
   }
-
-  #wd-assignments {
+  
+  ul li {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  ul li a {
+    color: var(--accent-blue);
+    transition: var(--transition);
+  }
+  
+  ul li a:hover {
+    color: var(--accent-purple);
+    transform: translateX(5px);
+    display: inline-block;
+  }
+  
+  /* SECTION STYLING */
+  .section {
+    background-color: var(--bg-secondary);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* PARAGRAPHS */
+  p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  
+  /* CODE BLOCKS AND EXAMPLES */
+  pre, code {
+    background-color: var(--bg-accent);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    margin: 15px 0;
+    border-left: 4px solid var(--accent-purple);
+  }
+  
+  code {
+    padding: 3px 6px;
+    border-left: none;
+  }
+  
+  /* FORM ELEMENTS */
+  input, textarea, select {
+    background-color: var(--bg-accent);
+    border: 1px solid #3a3a4c;
+    border-radius: var(--border-radius);
+    padding: 12px 15px;
+    color: var(--text-primary);
+    width: 100%;
+    margin-bottom: 15px;
+    transition: var(--transition);
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+  }
+  
+  /* BUTTONS */
+  button, .btn, #wd-signin-btn, #wd-signup-btn {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    text-align: center;
+    display: inline-block;
+  }
+  
+  button:hover, .btn:hover, #wd-signin-btn:hover, #wd-signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+  }
+  
+  /* SIGN IN / SIGN UP FORM */
+  /* Fix for specific content areas */
+  #wd-signin-screen, #wd-signup-screen, #wd-profile-screen {
+    margin-left: 260px;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+  }
+  
+  #wd-signin-screen h3, #wd-signup-screen h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+  }
+  
+  .wd-username, .wd-password {
+    margin-bottom: 20px;
+  }
+  
+  /* Dashboard specific fixes */
+  h1, h2, h3, h4, h5, h6, p, div {
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Dashboard components */
+  .dashboard-header, .published-courses, .course-card, .course-list {
+    margin-left: 260px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Published Courses section */
+  .published-courses, #published-courses {
+    margin-left: 260px;
     padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Course cards on dashboard */
+  .course-card, .wd-dashboard-course {
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-left: 260px;
+    width: calc(100% - 300px);
+    box-sizing: border-box;
+  }
+  
+  /* Ensure the Go button is visible and clickable */
+  .go-btn, .btn-go, button {
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* LAB CONTENT */
+  .lab-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--bg-accent);
+  }
+  
+  .lab-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .lab-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .lab-content {
+    background-color: var(--bg-secondary);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+  }
+  
+  .example-section {
+    margin-top: 30px;
+  }
+  
+  .example-section h3 {
+    margin-bottom: 15px;
+    color: var(--accent-indigo);
+  }
+  
+  /* ASSIGNMENT STYLES */
+  #wd-assignments {
+    padding: 30px;
   }
   
   #wd-search-assignment {
     margin-bottom: 20px;
-    width: 70%;
-    float: left;
-  }
-  
-  #wd-add-assignment-group, #wd-add-assignment {
-    margin-left: 10px;
-  }
-  
-  #wd-assignments-title {
-    clear: both;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   
   #wd-assignment-list {
-    margin-top: 15px;
-    border-radius: 4px;
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   
   .wd-assignment-list-item {
-    padding: 12px 15px;
-    border-left: 3px solid #007bff;
-    margin-bottom: 1px;
-    transition: background-color 0.2s;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--bg-accent);
+    transition: var(--transition);
   }
   
   .wd-assignment-list-item:hover {
-    background-color: #f8f9fa;
+    background-color: var(--bg-accent);
+  }
+  
+  .wd-assignment-list-item:last-child {
+    border-bottom: none;
   }
   
   .wd-assignment-link {
-    color: #212529;
-    text-decoration: none;
+    color: var(--text-primary);
+    display: block;
   }
   
   .wd-assignment-link:hover {
-    color: #007bff;
-  }
-
-  #wd-assignments-editor {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    color: var(--accent-indigo);
   }
   
-  #wd-name {
-    font-size: 1.25rem;
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  #wd-description {
-    width: 100%;
-    min-height: 150px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  #wd-assignments-editor table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 15px;
-  }
-  
-  #wd-assignments-editor td {
-    padding: 5px;
-  }
-  
-  #wd-assignments-editor td:first-child {
-    width: 30%;
-    text-align: right;
-    padding-right: 15px;
+  /* GO BUTTON */
+  .go-btn, a.go-btn {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 20px;
+    text-align: center;
     font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+    text-decoration: none;
   }
   
-  #wd-points, #wd-group, #wd-display-grade-as, 
-  #wd-due-date, #wd-available-from, #wd-available-until {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ced4da;
+  .go-btn:hover, a.go-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+    color: white;
   }
-
   
+  /* RESPONSIVE ADJUSTMENTS */
+  @media (max-width: 768px) {
+    #wd-kambaz-navigation {
+      width: 60px;
+      overflow: hidden;
+    }
+    
+    #wd-kambaz-navigation a span {
+      display: none;
+    }
+    
+    .main-content, #wd-home, #wd-assignments, 
+    .account-content, .dashboard-content, .labs-content,
+    #wd-signin-screen, #wd-signup-screen, #wd-profile-screen {
+      margin-left: 70px;
+    }
+  }
+  
+  /* GLOW EFFECT FOR ACTIVE ELEMENTS */
+  .glow {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+  }
+  
+  /* CUSTOM SCROLLBAR */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-accent);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+  }
