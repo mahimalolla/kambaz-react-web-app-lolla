@@ -2,7 +2,7 @@ export default function Lab1() {
     return (
       <div id="wd-lab1">
         <h2>Lab 1</h2>
-        <h3>Your Name - Your Section</h3>
+        <h3>Mahimanjali Lolla - Summer 1 Web Development</h3>
         
         <h3>HTML Examples</h3>
         
