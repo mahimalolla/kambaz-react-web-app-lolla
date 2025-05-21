@@ -1,0 +1,53 @@
+#wd-lab1 {
+  padding: 2rem;
+  color: #f0f0f0;
+}
+
+#wd-lab1 h4 {
+  margin-top: 2rem;
+  color: #96b4ff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: #1f1f1f;
+  color: white;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+}
+
+form button {
+  background-color: #337ab7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #23527c;
+}
