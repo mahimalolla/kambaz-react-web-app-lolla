@@ -8,40 +8,38 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
 import Quizzes from "./Quizzes";
 import QuizEditor from "./Quizzes/Editor";
-import './styles.css';
 import Grades from "./Grades";
 import Piazza from "./Piazza";
 import Zoom from "./Zoom";
+import './styles.css';
 
 export default function Kambaz() {
   return (
-    <div id="wd-kambaz">
-      <table width="100%">
-        <tbody>
-          <tr>
-            <td valign="top">
-              <CourseNavigation />
-            </td>
-            <td valign="top">
-              <Routes>
-                <Route path="/" element={<Navigate to="Account" />} />
-                <Route path="/Account/*" element={<Account />} />
-                <Route path="/Dashboard" element={<Dashboard />} />
-                <Route path="/Home" element={<Home />} />
-                <Route path="/Modules" element={<Modules />} />
-                <Route path="/Assignments" element={<Assignments />} />
-                <Route path="/Assignments/:aid" element={<AssignmentEditor />} />
-                <Route path="/Quizzes" element={<Quizzes />} />
-                <Route path="/Quizzes/:qid" element={<QuizEditor />} />
-                <Route path="/Grades" element={<Grades />} />
-                <Route path="/Piazza" element={<Piazza />} />
-                <Route path="/Zoom" element={<Zoom />} />
-                
-              </Routes>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="container-fluid">
+      <div className="row">
+        {/* Left Sidebar */}
+        <div className="col-md-2 bg-white min-vh-100 p-0">
+          <CourseNavigation />
+        </div>
+
+        {/* Right Content */}
+        <div className="col-md-10 p-4">
+          <Routes>
+            <Route path="/" element={<Navigate to="Account" />} />
+            <Route path="/Account/*" element={<Account />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Modules" element={<Modules />} />
+            <Route path="/Assignments" element={<Assignments />} />
+            <Route path="/Assignments/:aid" element={<AssignmentEditor />} />
+            <Route path="/Quizzes" element={<Quizzes />} />
+            <Route path="/Quizzes/:qid" element={<QuizEditor />} />
+            <Route path="/Grades" element={<Grades />} />
+            <Route path="/Piazza" element={<Piazza />} />
+            <Route path="/Zoom" element={<Zoom />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }

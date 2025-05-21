@@ -129,14 +129,23 @@ export default function Lab2() {
       {/* 2.2 – React Icons */}
       <ReactIcons />
 
-      {/* 2.3 – Bootstrap Responsive Grid */}
+      {/* 2.3 – Bootstrap Grid */}
       <div className="container mt-5">
-        <h3>Bootstrap Grid</h3>
+        <h4>Bootstrap Grid</h4>
         <div className="row text-center">
-          <div className="col-sm-6 col-md-4 col-lg-3 bg-primary text-white p-3 m-1 rounded">Column A</div>
-          <div className="col-sm-6 col-md-4 col-lg-3 bg-success text-white p-3 m-1 rounded">Column B</div>
-          <div className="col-sm-6 col-md-4 col-lg-3 bg-warning text-dark p-3 m-1 rounded">Column C</div>
-          <div className="col-sm-6 col-md-4 col-lg-3 bg-danger text-white p-3 m-1 rounded">Column D</div>
+          <div className="col-md-6 col-12 border p-2">Left (col-md-6 col-12)</div>
+          <div className="col-md-6 col-12 border p-2">Right (col-md-6 col-12)</div>
+        </div>
+
+        <div className="row text-center mt-3">
+          <div className="col-lg-8 col-12 border p-2">Main (col-lg-8 col-12)</div>
+          <div className="col-lg-4 col-12 border p-2">Sidebar (col-lg-4 col-12)</div>
+        </div>
+
+        <div className="row text-center mt-3">
+          <div className="col-sm-4 col-12 border p-2">1/3 (col-sm-4)</div>
+          <div className="col-sm-4 col-12 border p-2">1/3 (col-sm-4)</div>
+          <div className="col-sm-4 col-12 border p-2">1/3 (col-sm-4)</div>
         </div>
 
         <h3 className="mt-5">12 Column Responsive Grid</h3>

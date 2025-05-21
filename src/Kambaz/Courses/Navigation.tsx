@@ -11,7 +11,7 @@ export default function CourseNavigation() {
     { name: "Assignments", path: "/Kambaz/Assignments" },
     { name: "Quizzes", path: "/Kambaz/Quizzes" },
     { name: "Grades", path: "/Kambaz/Grades" },
-    { name: "Labs", path: "/Labs" }, 
+    { name: "Labs", path: "/Labs" },
   ];
 
   return (
@@ -22,13 +22,13 @@ export default function CourseNavigation() {
           <Link
             key={link.path}
             to={link.path}
-            className={`list-group-item ${
+            className={`list-group-item border-0 rounded-0 ${
               isActive
                 ? "text-black border-start border-4 border-dark bg-white"
-                : "text-white bg-black"
+                : "text-danger bg-white"
             }`}
           >
-            <i className="bi bi-dot text-danger me-2" /> {link.name}
+            <i className="bi bi-dot me-2" /> {link.name}
           </Link>
         );
       })}
