@@ -1,5 +1,5 @@
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 import ReactIcons from "./ReactIcons";
 
 export default function Lab2() {
