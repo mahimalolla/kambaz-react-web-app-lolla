@@ -1,5 +1,5 @@
 import './index.css';
-import localImg from '../../assets/local-image.jpg';
+
 
 
 export default function Lab1() {
@@ -85,13 +85,21 @@ export default function Lab1() {
         </table>
       </div>
 
-      {/* Images */}
-      <div id="wd-images">
-        <h4>Images</h4>
-        <img src="https://www.animalhospitalofclemmons.com/files/AdobeStock290844781.jpeg" alt="Remote example" width={150} />
-        <br />
-        <img src={localImg} alt="Local example" width={150} />
-      </div>
+{/* Images */}
+<div id="wd-images">
+  <h4>Images</h4>
+  <img
+    src="https://www.animalhospitalofclemmons.com/files/AdobeStock290844781.jpeg"
+    alt="Remote example"
+    width={150}
+  />
+  <br />
+  <img
+    src="/images/local-image.jpg"
+    alt="Local example"
+    width={150}
+  />
+</div>
 
       {/* Anchor Tags */}
       <div id="wd-anchor">
