@@ -1,9 +1,14 @@
 import './index.css';
 import localImg from '../../assets/local-image.jpg';
+
+
 export default function Lab1() {
   return (
-    <div id="wd-lab1">
-      <h1>Lab 1 - HTML Elements</h1>
+    <div id="wd-lab1" className="container mt-5">
+      <h1>Mahima Lolla</h1>
+      <h3>Section: [CS5610]</h3>
+
+
 
       {/* Headings */}
       <div id="wd-heading-tag">
@@ -61,7 +66,7 @@ export default function Lab1() {
       <div id="wd-table">
         <h4>Quiz Table</h4>
         <table style={{ border: "1px solid black" }}>
-  <thead>
+          <thead>
             <tr>
               <th>Quiz #</th>
               <th>Topic</th>
@@ -91,8 +96,8 @@ export default function Lab1() {
       {/* Anchor Tags */}
       <div id="wd-anchor">
         <h4>Links</h4>
-        <a href="https://google.com" target="_blank">Google</a><br />
-        <a href="https://github.com/mahimalolla" target="_blank">My GitHub</a>
+        <a href="https://google.com" target="_blank" rel="noreferrer">Google</a><br />
+        <a href="https://github.com/mahimalolla" target="_blank" rel="noreferrer">My GitHub</a>
       </div>
 
       {/* Forms */}

@@ -1,6 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+
 import ReactIcons from "./ReactIcons";
+import Float from "./Float";
+import Flex from "./Flex";
+import GridLayout from "./GridLayout";
+import BootstrapTables from './BootstrapTables';
+import BootstrapLists from './BootstrapLists';
+import BootstrapForms from './BootstrapForms';
+import BootstrapNavigation from './BootstrapNavigation';
 
 export default function Lab2() {
   return (
@@ -129,6 +137,15 @@ export default function Lab2() {
       {/* 2.2 – React Icons */}
       <ReactIcons />
 
+      {/* 2.1.17 – Floating Content */}
+      <Float />
+
+      {/* 2.1.18 – Grid Layout with custom CSS */}
+      <GridLayout />
+
+      {/* 2.1.19 – Flexbox Layout */}
+      <Flex />
+
       {/* 2.3 – Bootstrap Grid */}
       <div className="container mt-5">
         <h4>Bootstrap Grid</h4>
@@ -166,6 +183,18 @@ export default function Lab2() {
           <span className="d-none d-xl-block">XL+</span>
         </div>
       </div>
+
+      {/* 2.3.1 – Bootstrap Tables */}
+      <BootstrapTables />
+
+      {/* 2.3.2 – Bootstrap Lists */}
+      <BootstrapLists />
+
+      {/* 2.3.3 – Bootstrap Forms */}
+      <BootstrapForms />
+
+      {/* 2.3.4 – Bootstrap Navigation */}
+      <BootstrapNavigation />
     </div>
   );
 }
