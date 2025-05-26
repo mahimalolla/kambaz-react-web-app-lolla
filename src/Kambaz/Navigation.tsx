@@ -10,13 +10,18 @@ export default function KambazNavigation() {
     { name: "Calendar", icon: "calendar", path: "/Kambaz/Calendar" },
     { name: "Inbox", icon: "envelope", path: "/Kambaz/Inbox" },
     { name: "Labs", icon: "terminal", path: "/Labs" },
+    { name: "Lab 3", icon: "code-slash", path: "/Labs/Lab3" },  // ✅ NEW Lab 3 link
   ];
 
   return (
     <div className="bg-black text-center pt-3" style={{ width: "85px", minHeight: "100vh" }}>
       <a href="https://www.northeastern.edu" target="_blank" rel="noreferrer">
-        <img src="https://northeastern.edu/wp-content/themes/northeastern/assets/images/northeastern-logo.svg"
-             alt="Northeastern" className="img-fluid mb-4" style={{ width: "60px" }} />
+        <img
+          src="https://northeastern.edu/wp-content/themes/northeastern/assets/images/northeastern-logo.svg"
+          alt="Northeastern"
+          className="img-fluid mb-4"
+          style={{ width: "60px" }}
+        />
       </a>
 
       {links.map((link) => {
