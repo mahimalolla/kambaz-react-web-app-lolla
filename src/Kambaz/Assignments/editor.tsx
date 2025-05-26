@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const [assignment, setAssignment] = useState({
+  const [assignment] = useState({
     title: "A1 - HTML",
     points: 100,
     group: "Assignments",
