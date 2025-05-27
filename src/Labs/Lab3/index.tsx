@@ -57,7 +57,9 @@ export default function Lab3() {
       <DestructingParams />
       <Add a={3} b={5} />
       <Square n={4} />
-      <Highlight bg="yellow" fg="black" />
+     <Highlight bg="lightblue" fg="darkblue">
+  Hello, Mahima!
+</Highlight>
       <Classes />
       <Styles />
       <PathParameters />
