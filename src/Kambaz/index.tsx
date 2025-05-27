@@ -12,6 +12,8 @@ import Grades from "./Grades";
 import Piazza from "./Piazza";
 import Zoom from "./Zoom";
 import './styles.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 export default function Kambaz() {
   return (

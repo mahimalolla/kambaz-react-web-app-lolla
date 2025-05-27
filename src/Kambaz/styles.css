@@ -452,3 +452,13 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-blue);
   }
+
+nav ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style-type: none !important;
+}
