@@ -55,9 +55,9 @@ export default function Lab3() {
       <SpreadOperator />
       <Destructing />
       <DestructingParams />
-      <Add />
-      <Square />
-      <Highlight />
+      <Add a={3} b={5} />
+      <Square n={4} />
+      <Highlight bg="yellow" fg="black" />
       <Classes />
       <Styles />
       <PathParameters />
