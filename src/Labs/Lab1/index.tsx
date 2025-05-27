@@ -1,14 +1,10 @@
 import './index.css';
 
-
-
 export default function Lab1() {
   return (
     <div id="wd-lab1" className="container mt-5">
       <h1>Mahima Lolla</h1>
-      <h3>Section: [CS5610]</h3>
-
-
+      <h3>Section: CS5610</h3>
 
       {/* Headings */}
       <div id="wd-heading-tag">
@@ -85,27 +81,27 @@ export default function Lab1() {
         </table>
       </div>
 
-{/* Images */}
-<div id="wd-images">
-  <h4>Images</h4>
-  <img
-    src="https://www.animalhospitalofclemmons.com/files/AdobeStock290844781.jpeg"
-    alt="Remote example"
-    width={150}
-  />
-  <br />
-  <img
-    src="/images/local-image.jpg"
-    alt="Local example"
-    width={150}
-  />
-</div>
+      {/* Images */}
+      <div id="wd-images">
+        <h4>Images</h4>
+        <img
+          src="https://www.animalhospitalofclemmons.com/files/AdobeStock290844781.jpeg"
+          alt="Remote example"
+          width={150}
+        />
+        <br />
+        <img
+          src="/images/local-image.jpg"
+          alt="Local example"
+          width={150}
+        />
+      </div>
 
       {/* Anchor Tags */}
       <div id="wd-anchor">
         <h4>Links</h4>
         <a href="https://google.com" target="_blank" rel="noreferrer">Google</a><br />
-        <a href="https://github.com/mahimalolla" target="_blank" rel="noreferrer">My GitHub</a>
+        <a href="https://github.com/mahimalolla/kambaz-react-web-app-lolla" target="_blank" rel="noreferrer">My GitHub</a>
       </div>
 
       {/* Forms */}
@@ -113,46 +109,57 @@ export default function Lab1() {
         <h4>HTML Forms</h4>
         <form>
           <label>Username</label>
-          <input type="text" name="username" className="form-control" /><br/>
+          <input type="text" name="username" className="form-control" /><br />
 
           <label>Bio</label>
-          <textarea className="form-control" rows={3}></textarea><br/>
+          <textarea className="form-control" rows={3}></textarea><br />
 
-          <label>Gender</label><br/>
-          <input type="radio" name="gender" value="male" /> Male<br/>
-          <input type="radio" name="gender" value="female" /> Female<br/>
+          <label>Gender</label><br />
+          <input type="radio" name="gender" value="male" /> Male<br />
+          <input type="radio" name="gender" value="female" /> Female<br />
 
-          <label>Skills</label><br/>
-          <input type="checkbox" /> HTML<br/>
-          <input type="checkbox" /> CSS<br/>
-          <input type="checkbox" /> JavaScript<br/>
+          <label>Skills</label><br />
+          <input type="checkbox" /> HTML<br />
+          <input type="checkbox" /> CSS<br />
+          <input type="checkbox" /> JavaScript<br />
 
-          <label>Country</label><br/>
+          <label>Country</label><br />
           <select>
             <option>USA</option>
             <option>India</option>
             <option>Germany</option>
-          </select><br/>
+          </select><br />
 
-          <label>Favorite Tools</label><br/>
+          <label>Favorite Tools</label><br />
           <select multiple>
             <option>VSCode</option>
             <option>WebStorm</option>
             <option>Sublime</option>
-          </select><br/>
+          </select><br />
 
           <label>Email</label>
-          <input type="email" /><br/>
+          <input type="email" /><br />
           <label>Age</label>
-          <input type="number" /><br/>
+          <input type="number" /><br />
           <label>Date</label>
-          <input type="date" /><br/>
+          <input type="date" /><br />
           <label>Progress</label>
-          <input type="range" /><br/>
+          <input type="range" /><br />
 
           <button type="submit">Submit</button>
         </form>
       </div>
+
+      {/* Navigation Links */}
+      <hr />
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/Labs/Lab1">Lab 1</a></li>
+        <li><a href="/Labs/Lab2">Lab 2</a></li>
+        <li><a href="/Labs/Lab3">Lab 3</a></li>
+        <li><a href="/Kambaz/Account">Kambaz App</a></li>
+        <li><a href="https://github.com/mahimalolla/kambaz-react-web-app-lolla" target="_blank" rel="noreferrer">GitHub Repository</a></li>
+      </ul>
     </div>
   );
 }
